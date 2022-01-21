@@ -12,6 +12,7 @@ Take a look at the [PDF](https://github.com/brkncookie/libft/raw/bain4main/en.su
 - write a [Makefile](https://www.gnu.org/software/make/manual/make.html).
 - review->recode->comment.
 - implement tests.
+- organize the messy header file.
 
 ## Testers
 todo...
