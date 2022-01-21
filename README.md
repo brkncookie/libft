@@ -1,10 +1,10 @@
 # libft
-	Your very first own library.
+Your very first own library.
 ## Summary
 
 This project aims to code a C library regrouping usual functions that you’ll use for all your next projects.
 
-Take a look at the [PDF]()
+Take a look at the [PDF](https://github.com/brkncookie/libft/raw/bain4main/en.subject.pdf)
 
 ## TODOS
 
@@ -14,9 +14,9 @@ Take a look at the [PDF]()
 - implement tests.
 
 ## Testers
- todo...
+todo...
 
-##Useful Resources
+## Useful Resources
 
 - [where to find some libbsd functions?](https://opensource.apple.com/source/Libc/Libc-262/string/)
 - [other libc/glibc functions](https://code.woboq.org/)
