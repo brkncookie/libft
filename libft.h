@@ -30,6 +30,7 @@
 	char 	*ft_strnstr(const char *big, const char *lil, size_t len);
 	char	*ft_strdup(const char *s);
 	void	*ft_calloc(size_t nelm, size_t selm);
+	char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
 
