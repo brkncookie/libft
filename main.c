@@ -58,8 +58,14 @@ int main(int argc, char **argv)
 	/* printf("   strdup says %s\n", strdup(argv[1])); */
 	/* printf("ft_calloc says %p\n", ft_calloc(ft_atoi(argv[1]), ft_atoi(argv[2]))); */
 	/* printf("   calloc says %p\n", calloc(ft_atoi(argv[1]), ft_atoi(argv[2]))); */
-	 str = ft_substr(argv[1], ft_atoi(argv[2]), ft_atoi(argv[3]));
-	printf("ft_substr says %s\n", str);
+	/* str = ft_substr(argv[1], ft_atoi(argv[2]), ft_atoi(argv[3])); */
+	/* printf("ft_substr says %s\n", str); */
+	/* free(str); */
+	/* str = ft_strjoin(argv[1], argv[2]); */
+	/* printf("ft_strjoin says %s\n", str); */
+	/* free(str); */
+	str = ft_strtrim(argv[1], argv[2]);
+	printf("ft_strtrim says %s\n", str);
 	free(str);
 
 	return(0);
