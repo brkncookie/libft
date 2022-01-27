@@ -14,7 +14,7 @@ Take a look at the [PDF](https://github.com/brkncookie/libft/raw/bain4main/en.su
 - [ ] implement tests.
 - [ ] organize the messy header file.
 
-## Testers
+## Automated Tests
 *N/A*
 ## Useful Resources
 
