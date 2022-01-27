@@ -6,6 +6,7 @@ int main(int argc, char **argv)
 	if(argc < 2)
 		return(-1);
 	char *str;
+	char **sstr;
 	char *initchar(void)
 	{
 		char *s = malloc(11*sizeof(char));
@@ -64,9 +65,19 @@ int main(int argc, char **argv)
 	/* str = ft_strjoin(argv[1], argv[2]); */
 	/* printf("ft_strjoin says %s\n", str); */
 	/* free(str); */
-	str = ft_strtrim(argv[1], argv[2]);
-	printf("ft_strtrim says %s\n", str);
-	free(str);
+	/* str = ft_strtrim(argv[1], argv[2]); */
+	/* printf("ft_strtrim says %s\n", str); */
+	/* free(str); */
+	sstr = ft_split(argv[1], *argv[2]);
+	int i;
+	i = 0;
+	while(sstr[i])
+	{
+		printf("ft_split says %s\n", sstr[i]);
+		i++;
+	}
+	free(sstr);
+
 
 	return(0);
 }

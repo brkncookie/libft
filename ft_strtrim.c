@@ -5,36 +5,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*end;
 	char	*str;
 
+	if(!s1 || !set)
+		return(NULL);
 	end = (char *)s1 + ft_strlen(s1) - 1;
 
 	while(ft_strchr(set, *s1))
 		s1++;
 	while(ft_strrchr(set, *end))
 		end--;
-	str = malloc((end - s1 + 1) * sizeof(char));
-	ft_strlcpy(str, s1, end-s1+2);
+	/* nothing left to return */
+	if(end < (char *)s1)
+		return(ft_strdup(""));
+	/* we add 2 because 0xffffde5-0xffffde4 = 1 and we need a byte for the null =D */
+	str = malloc((end - s1 + 2) * sizeof(char));
+	if(!str)
+		return(NULL);
+	/* why re-invent the wheel, huh ? */
+	ft_strlcpy(str, s1, end - s1 +2);
 	return(str);
 }
-/* char	*ft_strtrim(char const *s1, char const *set) */
-/* { */
-/* 	ssize_t	i; */
-/* 	ssize_t	j; */
-/* 	char	*str; */
-
-/* 	if (!s1 || !set) */
-/* 		return (NULL); */
-/* 	i = 0; */
-/* 	j = ft_strlen(s1) - 1; */
-/* 	while (ft_strchr((char *)set, s1[i])) */
-/* 		i++; */
-/* 	while (ft_strrchr((char *)set, s1[j])) */
-/* 		j--; */
-/* 	if (j < i) */
-/* 		return (ft_strdup("")); */
-/* 	str = malloc(j - i + 2); */
-/* 	if (!str) */
-/* 		return (NULL); */
-/* 	ft_strlcpy(str, s1 + i, j - i + 2); */
-/* 	return (str); */
-/* } */
 
