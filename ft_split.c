@@ -1,5 +1,6 @@
 #include "libft.h"
 
+/* calculate how many strings we have in `s` to allocate the right amount of pointer variables */
 size_t ft_numptr(char const *s, char c)
 {
 	size_t n;
@@ -19,6 +20,18 @@ size_t ft_numptr(char const *s, char c)
 	}
 	return(n);
 }
+/* this subroutine is used to free all of the allocations if an error occurs */
+
+static char	**ft_frerec(char **strs, long long pinx)
+{
+	while(pinx >= 0)
+		free(strs[pinx--]);
+	free(strs);
+	return(NULL);
+
+}
+/* for earch trimmed string in `s` we allocate the appropriate memory size for it and copy it there */
+/* null the last pointer */
 char **ft_strput(char const *s, char c, char **strs, size_t nptr)
 {
 	long long inx;
@@ -36,9 +49,13 @@ char **ft_strput(char const *s, char c, char **strs, size_t nptr)
 			inx++;
 		sinx = inx;
 		while(s[inx] != c && s[inx])
+		{
 			l++;
 			inx++;
+		}
 		strs[pinx] = ft_calloc(l, sizeof(char) + 1);
+		if(!strs[pinx])
+			return(ft_frerec(strs, pinx));
 		ft_strlcpy(strs[pinx], &s[sinx], l + 1);
 		l = 0;
 		sinx = 0;
@@ -53,15 +70,18 @@ char	**ft_split(char const *s, char c)
 	size_t	nptr;
 	char	**strs;
 
-	/* allocat nptr of pointer variables */
+	if(!s)
+		return(NULL);
+	/* allocate nptr of pointer variables */
 	nptr = ft_numptr(s, c);
 	strs = ft_calloc(nptr, sizeof(char *) + 1);
+	if(!strs)
+		return(NULL);
 
 	/* get the strings to their final destination */
 	strs = ft_strput(s, c, strs, nptr);
+	if(!strs)
+		return(NULL);
 	return(strs);
 }
-/* calculate how many strings we have in `s` to allocate the right amount of pointer variables */
-/* for earch string in `s` we allocate the appropriate memory size for it and copy it there */
-/* null the last pointer */
 
