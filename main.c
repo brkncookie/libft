@@ -77,9 +77,14 @@ int main(int argc, char **argv)
 	/* 	i++; */
 	/* } */
 	/* free(sstr); */
-	printf("ft_itoa says %s\n", ft_itoa(ft_atoi(argv[1])));
-
-
+	/* printf("ft_itoa says %s\n", ft_itoa(ft_atoi(argv[1]))); */
+	/* printf("ft_strmapi says %s\n", ft_strmapi(argv[1], myf)); */
+	/* ft_striteri(argv[1], myf); */
+	/* printf("ft_striteri says %s\n", argv[1]); */
+	/* ft_putchar_fd(*argv[1], 2); */
+	/* ft_putstr_fd(argv[1], 2); */
+	/* ft_putendl_fd(argv[1], 1); */
+	ft_putnbr_fd(ft_atoi(argv[1]), 1);
 	return(0);
 }
 

@@ -36,7 +36,7 @@ char **ft_strput(char const *s, char c, char **strs, size_t nptr)
 {
 	long long inx;
 	long long sinx;
-	long long pinx;
+	size_t pinx;
 	size_t	  l;
 
 	l = 0;
