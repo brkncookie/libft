@@ -34,6 +34,7 @@
 	char 	*ft_strjoin(const char *s1, const char *s2);
 	char	*ft_strtrim(char const *s1, char const *set);
 	char	**ft_split(char const *s, char c);
+	char	*ft_itoa(int n);
 
 #endif
 

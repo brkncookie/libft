@@ -68,15 +68,16 @@ int main(int argc, char **argv)
 	/* str = ft_strtrim(argv[1], argv[2]); */
 	/* printf("ft_strtrim says %s\n", str); */
 	/* free(str); */
-	sstr = ft_split(argv[1], *argv[2]);
-	int i;
-	i = 0;
-	while(sstr[i])
-	{
-		printf("ft_split says %s\n", sstr[i]);
-		i++;
-	}
-	free(sstr);
+	/* sstr = ft_split(argv[1], *argv[2]); */
+	/* int i; */
+	/* i = 0; */
+	/* while(sstr[i]) */
+	/* { */
+	/* 	printf("ft_split says %s\n", sstr[i]); */
+	/* 	i++; */
+	/* } */
+	/* free(sstr); */
+	printf("ft_itoa says %s\n", ft_itoa(ft_atoi(argv[1])));
 
 
 	return(0);
