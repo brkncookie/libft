@@ -84,7 +84,34 @@ int main(int argc, char **argv)
 	/* ft_putchar_fd(*argv[1], 2); */
 	/* ft_putstr_fd(argv[1], 2); */
 	/* ft_putendl_fd(argv[1], 1); */
-	ft_putnbr_fd(ft_atoi(argv[1]), 1);
+	/* ft_putnbr_fd(ft_atoi(argv[1]), 1); */
+	int ft_crtcntlst(int n)
+	{
+		t_list **lst;
+		t_list *new;
+		int i;
+
+		lst = malloc(sizeof(t_list *) * n);
+		new = ft_lstnew(&n);
+		i = 0;
+
+		while(i < n)
+			lst[i++] = malloc(sizeof(t_list));
+		i = 0;
+		while(i < n)
+		{
+			if(i+1 == n)
+			{
+				lst[i]->next = NULL;
+				break;
+			}
+			lst[i]->next = lst[i+1];
+			i++;
+		}
+		ft_lstadd_front(lst, new);
+		return(ft_lstsize(new));
+	}
+	printf("the result for %d is %d\n", ft_atoi(argv[1]), ft_crtcntlst(ft_atoi(argv[1])));
 	return(0);
 }
 
