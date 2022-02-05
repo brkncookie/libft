@@ -1,4 +1,5 @@
 #include "libft.h"
+/* for each successive application of `f()` on characters of the string pointed to by `s` we create at the end a string */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t l;

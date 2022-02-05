@@ -1,4 +1,8 @@
 #include "libft.h"
+/* see https://opensource.apple.com/source/OpenSSH/OpenSSH-7.1/openssh/bsd-strlcat.c.auto.html && \
+https://opensource.apple.com/source/Libc/Libc-825.25/string/strlcat.c.auto.html */
+
+/* this function doesn't return more that the actual given parameter `size` if the string length is bigger than `size`*/
 size_t ft_strnlen(const char *s, size_t size)
 {
 	size_t l;
@@ -17,9 +21,18 @@ size_t ft_strnlen(const char *s, size_t size)
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
+	/* we need to know the size of each of `src` and `dst` */
 	const	size_t slen = ft_strlen(src);
 	const	size_t dlen = ft_strnlen(dst, size);
+	/* see if we have enough space in dest else return the string's length we tried to create */
 	if(dlen == size) return(dlen + slen);
+	/* now it is up to the provided param `size` to
+	decide if there is enough space for the null byte
+	, to understand it better try this in your head:
+
+	- `dst` points to a 7 bytes memory space containing the string "boy\0"
+	- `src` points to the string "boy\0"
+	now for size try to run it with 6 and afterwards run it with 7 and spot the difference */
 	if(slen < size - dlen )
 		ft_memcpy(dst+dlen, src, slen + 1);
 	else
@@ -29,31 +42,4 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return dlen + slen;
 }
-/* see https://opensource.apple.com/source/OpenSSH/OpenSSH-7.1/openssh/bsd-strlcat.c.auto.html && https://opensource.apple.com/source/Libc/Libc-825.25/string/strlcat.c.auto.html */
-/* size_t ft_rstrlcat(char *dst, const char *src, size_t siz) */
-/* { */
-/* 	char *d = dst; */
-/* 	const char *s = src; */
-/* 	size_t n = siz; */
-/* 	size_t dlen; */
-
-/* 	/1* Find the end of dst and adjust bytes left but don't go past end *1/ */
-/* 	while (*d != '\0' && n-- != 0) */
-/* 		d++; */
-/* 	dlen = d - dst; */
-/* 	n = siz - dlen; */
-
-/* 	if (n == 0) */
-/* 		return(dlen + strlen(s)); */
-/* 	while (*s != '\0') { */
-/* 		if (n != 1) { */
-/* 			*d++ = *s; */
-/* 			n--; */
-/* 		} */
-/* 		s++; */
-/* 	} */
-/* 	*d = '\0'; */
-
-/* 	return(dlen + (s - src));	/1* count does not include NUL *1/ */
-/* } */
 

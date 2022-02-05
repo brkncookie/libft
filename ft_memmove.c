@@ -1,4 +1,5 @@
 #include "libft.h"
+/* memory-overlap aware version of memcpy */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char 	t[n];

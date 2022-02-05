@@ -1,4 +1,5 @@
 #include "libft.h"
+/* locate the substring pointed by `lil` in the string `big` while not exceeding len */
 char 	*ft_strnstr(const char *big, const char *lil, size_t len)
 {
 	char *rpt;

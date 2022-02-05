@@ -8,9 +8,9 @@ Take a look at the [PDF](https://github.com/brkncookie/libft/raw/bain4main/en.su
 
 ## TODOS
 
-- [ ] finish writing 2nd part and bonus part.
+- [x] finish writing 2nd part and bonus part.
 - [x] write a [Makefile](https://www.gnu.org/software/make/manual/make.html).
-- [ ] review->recode->comment.
+- [x] review->recode->comment.
 - [ ] implement tests.
 - [x] organize the messy header file.
 

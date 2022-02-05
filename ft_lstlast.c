@@ -1,5 +1,5 @@
 #include "libft.h"
-
+/* get the last element of the linked list */
 t_list	*ft_lstlast(t_list *lst)
 {
 	while(lst)

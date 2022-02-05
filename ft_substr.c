@@ -1,4 +1,5 @@
 #include "libft.h"
+/* returns a substring from a string starting at `start` and only using `len` bytes */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *str;

@@ -1,5 +1,5 @@
 #include "libft.h"
-
+/* trim the string point to by `s1` at the start and end of it from characters point to by `set` */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*end;

@@ -1,4 +1,5 @@
 #include "libft.h"
+/*compare n bytes of memory locations pointed to by `s1` and `s2` */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while(n--)

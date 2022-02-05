@@ -1,5 +1,5 @@
 #include "libft.h"
-
+/* duplicate a string and return the duplicate */
 char	*ft_strdup(const char *s)
 {
 	char *d;

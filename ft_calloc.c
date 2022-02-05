@@ -1,5 +1,6 @@
 #include "libft.h"
-
+/* a fancy way of doing malloc(nelm*selm)
+and zeroing it*/
 void	*ft_calloc(size_t nelm, size_t selm)
 {
 	void	*pt;

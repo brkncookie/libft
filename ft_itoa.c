@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static long  ft_callen(long nm )
+static long  ft_calclen(long nm )
 {
 	long l;
 
@@ -20,7 +20,7 @@ static long  ft_callen(long nm )
 	}
 	return(l);
 }
-
+/* this ft_atoi in a parallel universe :) */
 char	*ft_itoa(int n)
 {
 	long 	nm;
@@ -28,7 +28,7 @@ char	*ft_itoa(int n)
 	long l;
 
 	nm = n;
-	l = ft_callen(nm);
+	l = ft_calclen(nm);
 	ichr = malloc(sizeof(char) * (l + 1));
 	if(!ichr)
 		return(NULL);

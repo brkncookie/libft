@@ -1,4 +1,5 @@
 #include "libft.h"
+/* libbsd/safer version of strncpy */
 /* visit https://opensource.apple.com/source/xnu/xnu-4570.1.46/osfmk/arm/strlcpy.c.auto.html */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

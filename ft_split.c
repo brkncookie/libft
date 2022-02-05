@@ -30,8 +30,9 @@ static char	**ft_frerec(char **strs, long long pinx)
 	return(NULL);
 
 }
-/* for earch trimmed string in `s` we allocate the appropriate memory size for it and copy it there */
-/* null the last pointer */
+/* for earch trimmed string in `s` we allocate the appropriate
+memory size for it and copy it there
+null the last pointer */
 char **ft_strput(char const *s, char c, char **strs, size_t nptr)
 {
 	long long inx;

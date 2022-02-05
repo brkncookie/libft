@@ -1,4 +1,5 @@
 #include "libft.h"
+/* copy `n` bytes from memory location pointed to by `src` to memory location pointed to by `dest` */
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
 	char	*d;

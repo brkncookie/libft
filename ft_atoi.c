@@ -1,5 +1,5 @@
 #include "libft.h"
-
+/* return an int from the digits that apppears in the string pointed in nptr */
 int	ft_atoi(const char *nptr)
 {
 	long long sgn;
